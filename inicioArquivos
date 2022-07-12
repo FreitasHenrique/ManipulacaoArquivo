@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv) {
+    FILE* arq =fopen("entrada.txt","r");
+    
+    if(arq != NULL){
+        printf("ARQUIVO ABERTO COM SUCESSO \n");
+        char *c;
+        while(fscanf(arq,"%c",&c) == 1){
+            printf("%c \n",c;
+        }    
+        
+        
+        int x = fclose(arq);
+        if(x == 0)
+            printf("ARQUIVO FECHADO COM SUCESSO \n");
+        
+    }else{
+        printf("NÃO FOI POSSÍVEL ABRIR O ARQUIVO \n");
+    }
+    return (EXIT_SUCCESS);
+}
+
+//pesquisar fseek,rewind,ungetc
+
